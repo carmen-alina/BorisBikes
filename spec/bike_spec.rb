@@ -6,6 +6,8 @@ describe Bike do
   end
 
   it 'gives true when bike is working' do
-    expect(:working?).to be true
+    station = DockingStation.new
+    bike = station.release_bike
+    expect(bike.working?).to be true
   end
 end
